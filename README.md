@@ -1,4 +1,5 @@
-# aar2jar
+# aar2jar fork. Supports Gradle 8.1
+Original author: stepango
 Gradle plugin which will help you to add Aar dependencies into your java|kotlin modules
 
 
@@ -6,7 +7,7 @@ How to use: add following lines in your module's `build.gradle` file
 ```
 plugins {
 	id 'kotlin'
-	id 'com.stepango.aar2jar' version “0.6” // <- this one
+	id 'com.andryuh.aar2jar' version “0.7” // <- this one
 }
 
 
