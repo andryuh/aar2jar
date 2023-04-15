@@ -1,5 +1,6 @@
 # aar2jar fork. Supports Gradle 8.1
 Original author: stepango
+
 Gradle plugin which will help you to add Aar dependencies into your java|kotlin modules
 
 
