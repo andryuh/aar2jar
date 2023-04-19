@@ -113,7 +113,7 @@ fun SourceSetContainer.withName(name: String, f: SourceSet.() -> Unit) {
 
 abstract class AarToJarTransform : TransformAction<TransformParameters.None> {
 
-    @PathSensitive(PathSensitivity.NAME_ONLY)
+    @PathSensitive(PathSensitivity.RELATIVE)
     @InputArtifact
     abstract fun aarProvider(): Provider<FileSystemLocation>
 
