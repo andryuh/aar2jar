@@ -113,12 +113,12 @@ fun SourceSetContainer.withName(name: String, f: SourceSet.() -> Unit) {
 
 abstract class AarToJarTransform : TransformAction<TransformParameters.None> {
 
-    @PathSensitive(PathSensitivity.RELATIVE)
-    @InputArtifact
-    abstract fun aarProvider(): Provider<FileSystemLocation>
+    @get:PathSensitive(PathSensitivity.RELATIVE)
+    @get:InputArtifact
+    abstract val inputFile: Provider<FileSystemLocation>
 
     override fun transform(outputs: TransformOutputs) {
-        val input = aarProvider().get().asFile
+        val input = inputFile.get().asFile
         val outputFile = outputs.file(input.name.replace(".aar", ".jar"))
 
         ZipFile(input).use { zipFile ->
