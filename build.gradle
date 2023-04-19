@@ -2,26 +2,10 @@ plugins {
     id "org.jetbrains.kotlin.jvm" version "1.8.10"
     id "java-gradle-plugin"
     id "org.gradle.kotlin.kotlin-dsl" version "4.0.7"
-    id "com.gradle.plugin-publish" version "1.2.0"
 }
 
 group = "com.andryuh.aar2jar"
 version = "0.7"
-
-gradlePlugin {
-    website = "https://github.com/stepango/aar2jar"
-    vcsUrl = "https://github.com/stepango/aar2jar.git"
-
-    plugins {
-        aar2jar {
-            id = "com.andryuh.aar2jar"
-            displayName = "Aar2Jar"
-            description = "Transforms Aar's to Jar's"
-            implementationClass = "com.andryuh.aar2jar.Aar2Jar"
-            tags.set(List.of("kotlin", "android", "jar", "aar"))
-        }
-    }
-}
 
 dependencies {
     compileOnly gradleApi()
